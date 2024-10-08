@@ -71,9 +71,9 @@ def delete_repo(repo_name: str) -> None:
     response: requests.Response = requests.delete(url, headers=HEADERS)
 
     if response.status_code == 204:
-        print(f"Repository '{repo_name}' has been deleted.")
+        print(f"3. Repository '{repo_name}' has been deleted.")
     elif response.status_code == 404:
-        print(f"Repository '{repo_name}' not found.")
+        print(f"3. Repository '{repo_name}' not found.")
     else:
         response.raise_for_status()
 
