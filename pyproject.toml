@@ -19,11 +19,22 @@ ruff = "^0.6.9"
 
 [tool.ruff]
 line-length = 120
-select = ["E", "F", "W", "I", "C", "B", "A"]
-ignore = ["E501", "B008"]
+target-version = "py312"
+lint.select = [
+  "F",   # pyflakes
+  "A",   # flake8-builtins
+  "E",   # pycodestyle
+  "W",   # pycodestyle
+  "N",   # pep8-naming  
+  "UP",  # pyupgrade,
+  "I",   # isort
+  "B",   # flake8-bugbear
+  "RET", # flake8-return
+]
 
-[tool.ruff.lint.flake8-quotes]
-docstring-quotes = "double"
+fix = false
+show-fixes = true
+output-format = "full"
 
 [tool.ruff.lint.isort]
 lines-between-types = 1
